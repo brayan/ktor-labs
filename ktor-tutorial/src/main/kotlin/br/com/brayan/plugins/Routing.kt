@@ -1,5 +1,6 @@
 package br.com.brayan.plugins
 
+import br.com.brayan.route.customerRouting
 import io.ktor.server.routing.*
 import io.ktor.http.*
 import io.ktor.server.application.*
@@ -12,5 +13,6 @@ fun Application.configureRouting() {
         get("/") {
             call.respondText("Hello World!")
         }
+        customerRouting()
     }
 }
