@@ -10,7 +10,7 @@ import kotlin.test.assertEquals
 internal class OrderRoutesTest {
 
     @Test
-    fun testGetOrder() = testApplication {
+    fun `should get order`() = testApplication {
         val response = client.get("/order/2023-01-17")
 
         val expected = """{"number":"2023-01-17","contents":[{"item":"Ham Sandwich","amount":2,"price":5.5},{"item":"Water","amount":1,"price":1.5},{"item":"Beer","amount":3,"price":2.3},{"item":"Cheesecake","amount":1,"price":3.75}]}"""
